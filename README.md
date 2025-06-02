@@ -47,4 +47,4 @@ Welcome to **Let's Find**, a beautifully animated dictionary web app that helps 
 
 **Samarth Varshney**
 
-Thank you for visiting out this project!😊
+Thank you for checking out this project! 😊
