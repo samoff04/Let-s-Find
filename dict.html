@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Let's Find - Dictionary App</title>
+  <link rel="stylesheet" href="dict.css" />
+</head>
+<body>
+  <div class="emoji-background"></div>
+
+  <main class="app-container" role="main" aria-label="Let's Find Dictionary App">
+    <h1>📖 Let's Find</h1>
+    <button id="searchWordBtn" aria-haspopup="dialog" aria-controls="wordInputPopup">🔍 Search Word</button>
+    <button id="leaveBtn" aria-haspopup="dialog" aria-controls="leavePopup">🚪 Leave App</button>
+  </main>
+
+  <!-- Word Input Popup -->
+  <div class="popup" id="wordInputPopup" role="dialog" aria-modal="true" aria-labelledby="wordInputTitle" aria-hidden="true">
+    <div class="popup-content" tabindex="-1">
+      <h2 id="wordInputTitle">Enter a Word</h2>
+      <input
+        type="text"
+        id="wordInput"
+        placeholder="e.g., serendipity"
+        autocomplete="off"
+        aria-describedby="wordInputDesc"
+      />
+      <div id="wordInputDesc" class="sr-only">Input a word to search meaning</div>
+      <button id="submitWord">Find Meaning</button>
+    </div>
+  </div>
+
+  <!-- Meaning Popup -->
+  <div class="popup" id="meaningPopup" role="dialog" aria-modal="true" aria-labelledby="meaningTitle" aria-hidden="true">
+    <div class="popup-content" tabindex="-1">
+      <h2 id="meaningTitle">Meaning</h2>
+      <p id="meaningText">Loading...</p>
+      <button id="closeMeaning">Close</button>
+    </div>
+  </div>
+
+  <!-- Leave Confirmation Popup -->
+  <div class="popup" id="leavePopup" role="dialog" aria-modal="true" aria-labelledby="leaveTitle" aria-hidden="true">
+    <div class="popup-content" tabindex="-1">
+      <h2 id="leaveTitle">Are you sure you want to leave?</h2>
+      <button id="confirmLeave">Yes</button>
+      <button id="cancelLeave">No</button>
+    </div>
+  </div>
+
+  <!-- Thanks Popup -->
+  <div class="popup" id="thanksPopup" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="popup-content" tabindex="-1">
+      <h2>Thanks for using Let's Find!</h2>
+    </div>
+  </div>
+
+  <script src="dict.js"></script>
+</body>
+</html>
